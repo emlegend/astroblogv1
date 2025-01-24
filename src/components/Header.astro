@@ -10,3 +10,9 @@ import Hamburger from "./hamburger.astro";
         <Hamburger />
     </nav>
 </header>
+
+<script>
+document.querySelector('.Hamburger')?.addEventListener('click', () => {
+    document.querySelector('.nav-links')?.classList.toggle('expanded');
+    });
+</script>
