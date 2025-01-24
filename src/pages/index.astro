@@ -1,19 +1,27 @@
 ---
-const pageTitle = "homepage"
+import Header from "../components/Header.astro";
+const pageTitle = "homepage";
+import '../styles/global.css';
+import Footer1 from '../components/footer1.astro';
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-	<a href="/">Home</a>
-	<a href="/about/">About</a>
-	<a href="/blog/">blog</a>
-	<h1>ASTRO</h1>
-	</body>
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<meta name="viewport" content="width=device-width" />
+	<meta name="generator" content={Astro.generator} />
+	<title>Astro</title>
+</head>
+<body>
+<Header />
+<h1>ASTRO</h1>
+<Footer1 />
+<script>
+	document.querySelector('.Hamburger')?.addEventListener('click', () => {
+		document.querySelector('.nav-links')?.classList.toggle('expanded');
+	});
+</script>
+</body>
 </html>
+
