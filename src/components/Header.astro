@@ -1,18 +1,22 @@
 
 ---
-import Navigation from './navigation.astro';
-import Hamburger from "./hamburger.astro";
 ---
 <header>
-
     <nav>
-        <Navigation />
-        <Hamburger />
+        <div class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/blog">Blog</a>
+        </div>
     </nav>
+    <script>
+        document.querySelector('.hamburger')?.addEventListener('click', () => {
+            document.querySelector('.nav-links')?.classList.toggle('expanded');
+        });
+    </script>
 </header>
-
-<script>
-document.querySelector('.Hamburger')?.addEventListener('click', () => {
-    document.querySelector('.nav-links')?.classList.toggle('expanded');
-    });
-</script>

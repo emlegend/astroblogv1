@@ -1,8 +1,9 @@
 ---
-import Header from "../components/Header.astro";
+
 const pageTitle = "homepage";
 import '../styles/global.css';
 import Footer1 from '../components/footer1.astro';
+import Header from '../components/Header.astro';
 ---
 
 <html lang="en">
@@ -13,15 +14,12 @@ import Footer1 from '../components/footer1.astro';
 	<meta name="generator" content={Astro.generator} />
 	<title>Astro</title>
 </head>
-<body>
 <Header />
+<body>
 <h1>ASTRO</h1>
 <Footer1 />
-<script>
-	document.querySelector('.Hamburger')?.addEventListener('click', () => {
-		document.querySelector('.nav-links')?.classList.toggle('expanded');
-	});
-</script>
+
+
 </body>
 </html>
 
