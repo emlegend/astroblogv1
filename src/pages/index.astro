@@ -1,9 +1,7 @@
 ---
 import BaseLayout from '../layout/BaseLayout.astro';
 const { pageTitle } = Astro.props;
-import Greeting from '../components/greeting';
 ---
 <BaseLayout pageTitle={pageTitle}>
 	<h1 class="title">Welcome to the 41th millenium</h1>
-	<Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
 </BaseLayout>
