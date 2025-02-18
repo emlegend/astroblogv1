@@ -1,12 +1,37 @@
 ---
+const { pageTitle } = Astro.props;
 import BaseLayout from '../layout/BaseLayout.astro';
-import BlogPost from '../components/BlogPosts.astro';
-const allPosts = Object.values(import.meta.glob('../pages/posts/*.md', { eager: true }));
-const pageTitle = "My Astro Learning Blog"
+import BlogPostCard from '../components/Postcard.astro';  // Assuming you have this component
+
+// Define the structure of the Post object
+type Post = {
+    frontmatter: {
+        title: string;
+        date: string;
+        excerpt: string;
+    };
+    url: string;
+};
+
+// Get all posts and sort them by date
+const allPosts = Object.values(import.meta.glob('../pages/posts/*.md', { eager: true })) as Post[];
+
+// Sort posts by date in descending order (latest posts first)
+const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
 ---
+
 <BaseLayout pageTitle={pageTitle}>
-    <p>This is where I will post about my journey learning Astro.</p>
-    <ul>
-        {allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
-    </ul>
+    <h1 class="title">Welcome to Morks News Network</h1>
+
+    <!-- Blog posts grid -->
+    <div class="posts-grid">
+        {sortedPosts.map((post) => (
+                <BlogPostCard
+                        url={post.url}
+                        title={post.frontmatter.title}
+                        date={post.frontmatter.date}
+                        excerpt={post.frontmatter.excerpt}
+                />
+        ))}
+    </div>
 </BaseLayout>
