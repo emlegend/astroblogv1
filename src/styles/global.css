@@ -1,19 +1,35 @@
-/* Navigation styles */
+/* ===================== */
+/* Global Styles */
+/* ===================== */
+
+html {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #13151a;
+}
+
+html.dark {
+    background-color: #0d0950;
+    color: #fff;
+}
+
+/* ===================== */
+/* Navigation Styles */
+/* ===================== */
+
 nav {
     display: flex;
     align-items: center;
-    padding: 1rem;
-    color: rgba(19, 21, 26, 0);
+    justify-content: space-between;
     background-color: #13151a;
+    margin-inside: 10px;
+    padding-top: 10px;
 }
 
 .hamburger {
     display: none;
     cursor: pointer;
     padding: 0.5rem;
-    color: #ff0000;
-
-
 }
 
 .hamburger .line {
@@ -23,7 +39,6 @@ nav {
     margin: 5px auto;
     background-color: #002eff;
     transition: all 0.3s ease-in-out;
-    color: orange;
 }
 
 .nav-links {
@@ -34,7 +49,8 @@ nav {
 .nav-links a {
     color: white;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding-left:10px;
+    order: 1;
 }
 
 @media screen and (max-width: 768px) {
@@ -52,22 +68,100 @@ nav {
         padding: 1rem;
         flex-direction: column;
         align-items: center;
+        order: 1; /* Moves the dark mode toggle to the right */
     }
 
     .nav-links.expanded {
         display: flex;
     }
 }
-html.dark {
-    background-color: #0d0950;
+
+/* Dark mode for navigation */
+html.dark .nav-links a {
     color: #fff;
 }
 
-.dark .nav-links a {
-    color: #fff;
-}
+
+/* ===================== */
+/* Blog Section Styles */
+/* ===================== */
 
 .title {
     color: red;
     padding: 0.5rem;
+}
+
+/* Blog Posts Grid */
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Blog Post Card */
+.blog-post-card {
+    background-color: #7a7878;
+    border: 1px solid #0b0b0b;
+    border-radius: 8px;
+    padding: 1.5rem;
+    list-style: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.blog-post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Blog Post Typography */
+.blog-post-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.blog-post-date {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.blog-post-excerpt {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* ===================== */
+/* Dark Mode for Blog Posts */
+/* ===================== */
+
+html.dark .blog-post-card {
+    background-color: #1e1e1e;
+    border: 1px solid #fff;
+}
+
+html.dark .blog-post-title {
+    color: #fff;
+}
+
+html.dark .blog-post-date {
+    color: #ccc;
+
+}
+
+html.dark .blog-post-excerpt {
+    color: #ddd;
+}
+
+/* Hover Effects in Dark Mode */
+html.dark .blog-post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.15);
 }

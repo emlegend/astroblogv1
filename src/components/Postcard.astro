@@ -1,0 +1,12 @@
+---
+const { url, title, date, excerpt } = Astro.props;
+---
+<li class="blog-post-card">
+    <a href={url}>
+        <h2 class="blog-post-title">{title}</h2>
+        <p class="blog-post-date">{new Date(date).toLocaleDateString()}</p>
+        {excerpt && <p class="blog-post-excerpt">{excerpt}</p>}
+    </a>
+</li>
+
+
