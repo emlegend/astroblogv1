@@ -12,14 +12,25 @@ type Post = {
 	url: string;
 };
 
-// Get all posts and sort them by date
+// Get all posts eagerly
 const allPosts = Object.values(import.meta.glob('../pages/posts/*.md', { eager: true })) as Post[];
 
-// Sort posts by date in descending order (latest posts first)
-const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
+// Sort posts by date in descending order (newest posts first)
+const sortedPosts = allPosts.sort((a, b) => {
+	const dateA = new Date(a.frontmatter.date).getTime();
+	const dateB = new Date(b.frontmatter.date).getTime();
+	return dateB - dateA; // Ensures newest posts come first
+});
 
 // Get the latest 3 posts
 const latestPosts = sortedPosts.slice(0, 3);
+
+// Debugging: Log to check the order
+console.log("Sorted Posts Dates:", sortedPosts.map(post => post.frontmatter.date));
+
+export { latestPosts };
+
+
 ---
 
 <BaseLayout pageTitle={Astro.props.pageTitle}>
