@@ -4,8 +4,14 @@ const { pageTitle } = Astro.props;
 ---
 <BaseLayout pageTitle={pageTitle}>
     <h2>MY models</h2>
+    <div class="row">
+        <div class="column">
     <p>this Page is currently under construction</p>
-    <img src="../src/images/img1.jpg">
-    <img src="../src/images/img3.jpg">
-    <img src="../src/images/img4.jpg"></img>
+    <img src="../src/images/img1.jpg" height="800" width="800" />
+    <br>
+    <img src="../src/images/img3.jpg" height="800" width="800" />
+    <br>
+    <img src="../src/images/img4.jpg" height="800" width="800"></img>
+        </div>
+        </div>
 </BaseLayout>
