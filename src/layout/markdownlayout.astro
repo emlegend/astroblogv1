@@ -7,7 +7,7 @@ const { frontmatter, Content } = Astro.props;
     <p>{frontmatter.date ? frontmatter.date.toString().slice(0, 10) : "Date not available"}</p>
     <p><em>{frontmatter.description || "No description available"}</em></p>
     <p>Written by: {frontmatter.author || "Unknown Author"}</p>
-
+    <img src={frontmatter.image?.url || '/default-image.jpg'} width="300" alt={frontmatter.image?.alt || 'Image description unavailable'} />
 
     <slot/>
 </BaseLayout>
