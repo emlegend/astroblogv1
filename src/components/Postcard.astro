@@ -1,11 +1,21 @@
 ---
-const { url, title, date, excerpt } = Astro.props;
+const { url, title, date, excerpt, imageUrl, imageAlt } = Astro.props;
 ---
 
 <li class="blog-post-card">
     <a href={url}>
         <h2 class="blog-post-title">{title}</h2>
         <p class="blog-post-date">{new Date(date).toLocaleDateString()}</p>
+
+        {imageUrl && (
+                <img
+                        src={imageUrl}
+                        alt={imageAlt}
+                        class="blog-post-image"
+                        loading="lazy"
+                />
+        )}
+
         {excerpt && <p class="blog-post-excerpt">{excerpt}</p>}
     </a>
 </li>

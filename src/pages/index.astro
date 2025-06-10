@@ -8,6 +8,10 @@ type Post = {
 		title: string;
 		date: string; // Date in string format
 		excerpt: string;
+		image?: {
+			url: string;
+			alt: string;
+		};
 	};
 	url: string;
 };
@@ -29,8 +33,6 @@ const latestPosts = sortedPosts.slice(0, 3);
 console.log("Sorted Posts Dates:", sortedPosts.map(post => post.frontmatter.date));
 
 export { latestPosts };
-
-
 ---
 
 <BaseLayout pageTitle={Astro.props.pageTitle}>
@@ -38,13 +40,20 @@ export { latestPosts };
 
 	<!-- Latest posts grid -->
 	<div class="posts-grid">
-		{latestPosts.map((post: Post) => (
-			<BlogPostCard
-				url={post.url}
-				title={post.frontmatter.title}
-				date={post.frontmatter.date}
-				excerpt={post.frontmatter.excerpt}
-			/>
-		))}
+		{latestPosts.map((post: Post) => {
+			const imageUrl = post.frontmatter.image?.url ?? '/default-fallback.jpg'; // Fallback image
+			const imageAlt = post.frontmatter.image?.alt ?? 'Post image';
+
+			return (
+				<BlogPostCard
+					url={post.url}
+					title={post.frontmatter.title}
+					date={post.frontmatter.date}
+					excerpt={post.frontmatter.excerpt}
+					imageUrl={imageUrl}
+					imageAlt={imageAlt}
+				/>
+			);
+		})}
 	</div>
 </BaseLayout>
