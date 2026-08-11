@@ -1,15 +1,63 @@
 ---
 import BaseLayout from '../layout/BaseLayout.astro';
-const { pageTitle } = Astro.props;
+const pageTitle = "About | Morks News Network";
 ---
 
-
-
 <BaseLayout pageTitle={pageTitle}>
-<h2>about me</h2>
-    <p>i play warhammer since january 2024 and enjoy to play orks <br> i also have ~1000 points sisters of battle and ~1800 point gloomspite gitz</p>
-<p>check out the <a href ="/models">model Page</a> to see pictures of my models</p>
+    <section class="about-section">
+        <h1 class="title">About the Network</h1>
+        <div class="content-box">
+            <p>Welcome to Morks News Network (MNN), the premier source for all things WAAAGH! and beyond.</p>
+            <p>I've been playing Warhammer since January 2024, finding my true calling with the Orks. There's something undeniably satisfying about a good krumpin'.</p>
+            <p>Beyond the greenskins, my collection includes about 1000 points of Adepta Sororitas and approximately 1800 points of Gloomspite Gitz for Age of Sigmar.</p>
+            <div class="cta-box">
+                <p>Curious about the painted hoard?</p>
+                <a href="/models" class="btn">View My Models</a>
+            </div>
+        </div>
+    </section>
 </BaseLayout>
 
-
-
+<style>
+    .about-section {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .content-box {
+        background: var(--bg-card);
+        padding: 3rem;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        text-align: left;
+    }
+    .content-box p {
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        color: var(--text-main);
+    }
+    .cta-box {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--border);
+        text-align: center;
+    }
+    .btn {
+        display: inline-block;
+        background: var(--primary);
+        color: white;
+        padding: 0.8rem 2rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-family: var(--font-heading);
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+    }
+    .btn:hover {
+        background: var(--primary-light);
+        border-color: var(--accent);
+        transform: translateY(-2px);
+    }
+</style>

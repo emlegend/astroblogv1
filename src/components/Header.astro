@@ -3,21 +3,26 @@
 ---
 <header>
     <nav>
-        <div class="hamburger">
+        <a href="/" class="logo">MNN</a>
+        <button class="hamburger" aria-label="Toggle Menu">
             <span class="line"></span>
             <span class="line"></span>
             <span class="line"></span>
-        </div>
+        </button>
         <div class="nav-links">
             <a href="/">Home</a>
             <a href="/about">About</a>
             <a href="/blog">Blog</a>
         </div>
     </nav>
-    <script>
-        document.querySelector('.hamburger')?.addEventListener('click', () => {
-            document.querySelector('.nav-links')?.classList.toggle('expanded');
-        });
-
-    </script>
 </header>
+
+<style>
+    .logo {
+        font-family: var(--font-heading);
+        color: var(--accent);
+        font-size: 1.8rem;
+        text-decoration: none;
+        letter-spacing: 2px;
+    }
+</style>

@@ -4,7 +4,7 @@ date: 2025-03-19
 description: 'review of the more dakka detachement'
 author: 'Elia'
 image:
-  url: "../src/images/analize.jpg"
+  url: "/images/analize.jpg"
   alt: "my spearhead."
 layout: "../../layout/markdownlayout.astro"
 ---

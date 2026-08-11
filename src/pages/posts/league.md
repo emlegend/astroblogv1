@@ -4,7 +4,7 @@ date: 2025-05-19
 description: 'My first Battle Report'
 author: 'Elia'
 image:
-url: "../src/images/score.jpg"
+url: "/images/score.jpg"
 alt: "Score."
 layout: "../../layout/markdownlayout.astro"
 ---

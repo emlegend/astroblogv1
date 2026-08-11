@@ -1,17 +1,98 @@
 ---
-import  BaseLayout from '../layout/BaseLayout.astro';
-const { pageTitle } = Astro.props;
+import BaseLayout from '../layout/BaseLayout.astro';
+import { Image } from 'astro:assets';
+
+// Importing images
+import img1 from '../images/img1.jpg';
+import img3 from '../images/img3.jpg';
+import img4 from '../images/img4.jpg';
+import analize from '../images/analize.jpg';
+import score from '../images/score.jpg';
+import spearhead from '../images/spearhead.jpg';
+import wolf from '../images/wolf.jpg';
+
+const pageTitle = "Models | Morks News Network";
+
+const models = [
+    { src: img1, alt: "Model 1" },
+    { src: img3, alt: "Model 3" },
+    { src: img4, alt: "Model 4" },
+    { src: analize, alt: "Analysis" },
+    { src: score, alt: "Score" },
+    { src: spearhead, alt: "Spearhead" },
+    { src: wolf, alt: "Wolf" }
+];
 ---
+
 <BaseLayout pageTitle={pageTitle}>
-    <h2>MY models</h2>
-    <div class="row">
-        <div class="column">
-    <p>this Page is currently under construction</p>
-    <img src="../src/images/img1.jpg" height="800" width="800" />
-    <br>
-    <img src="../src/images/img3.jpg" height="800" width="800" />
-    <br>
-    <img src="../src/images/img4.jpg" height="800" width="800"></img>
+    <section class="models-gallery">
+        <h1 class="title">The War Room</h1>
+        <p class="gallery-intro">A collection of my painted miniatures and battlefield shots.</p>
+        
+        <div class="gallery-grid">
+            {models.map((model) => (
+                <div class="gallery-item">
+                    <Image src={model.src} alt={model.alt} width={800} height={800} class="gallery-image" />
+                    <div class="image-overlay">
+                        <span>{model.alt}</span>
+                    </div>
+                </div>
+            ))}
         </div>
-        </div>
+    </section>
 </BaseLayout>
+
+<style>
+    .models-gallery {
+        text-align: center;
+    }
+    .gallery-intro {
+        margin-bottom: 3rem;
+        color: var(--text-muted);
+        font-size: 1.2rem;
+    }
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 2rem;
+    }
+    .gallery-item {
+        position: relative;
+        border-radius: var(--radius);
+        overflow: hidden;
+        aspect-ratio: 1 / 1;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+    }
+    .gallery-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    .gallery-item:hover .gallery-image {
+        transform: scale(1.05);
+    }
+    .image-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0,0,0,0.8));
+        padding: 2rem 1rem 1rem;
+        color: white;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .gallery-item:hover .image-overlay {
+        opacity: 1;
+    }
+    .image-overlay span {
+        font-family: var(--font-heading);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+</style>

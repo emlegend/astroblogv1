@@ -7,7 +7,8 @@ type Post = {
 	frontmatter: {
 		title: string;
 		date: string; // Date in string format
-		excerpt: string;
+		excerpt?: string;
+		description?: string;
 		image?: {
 			url: string;
 			alt: string;
@@ -35,7 +36,7 @@ console.log("Sorted Posts Dates:", sortedPosts.map(post => post.frontmatter.date
 export { latestPosts };
 ---
 
-<BaseLayout pageTitle={Astro.props.pageTitle}>
+<BaseLayout pageTitle={Astro.props.pageTitle || "Home | Morks News Network"}>
 	<h1 class="title">Welcome to Morks News Network</h1>
 
 	<!-- Latest posts grid -->
@@ -49,7 +50,7 @@ export { latestPosts };
 					url={post.url}
 					title={post.frontmatter.title}
 					date={post.frontmatter.date}
-					excerpt={post.frontmatter.excerpt}
+					excerpt={post.frontmatter.excerpt || post.frontmatter.description}
 					imageUrl={imageUrl}
 					imageAlt={imageAlt}
 				/>

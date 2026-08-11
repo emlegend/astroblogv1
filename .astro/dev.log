@@ -1,0 +1,166 @@
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"Generated 1ms","label":"types","level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"Re-optimizing dependencies because vite config has changed","label":"vite","level":"info"}
+{"message":" astro  v7.1.6 ready in 4131 ms\n┃ Local    http://localhost:4321/\n┃ Network  use --host to expose","label":"SKIP_FORMAT","level":"info"}
+{"message":"watching for file changes...","label":null,"level":"info"}
+Sorted Posts Dates: [
+  '2025-09-27T00:00:00.000Z',
+  '2025-05-19T00:00:00.000Z',
+  '2025-03-19T00:00:00.000Z',
+  '2025-03-03T00:00:00.000Z',
+  '2025-02-20T00:00:00.000Z'
+]
+{"message":"[200] / 84ms","label":null,"level":"info"}
+{"message":"[404] /default-fallback.jpg 94ms","label":null,"level":"info"}
+{"message":"[404] /images/rtt.png 85ms","label":null,"level":"info"}
+{"message":"[404] /images/rtt.png 2ms","label":null,"level":"info"}
+{"message":"[404] /default-fallback.jpg 1ms","label":null,"level":"info"}
+{"message":"[200] /posts/rttpt1 13ms","label":null,"level":"info"}
+{"message":"[404] /images/rtt.png 1ms","label":null,"level":"info"}
+{"message":"[404] /images/rtt.png 2ms","label":null,"level":"info"}
+Sorted Posts Dates: [
+  '2025-09-27T00:00:00.000Z',
+  '2025-05-19T00:00:00.000Z',
+  '2025-03-19T00:00:00.000Z',
+  '2025-03-03T00:00:00.000Z',
+  '2025-02-20T00:00:00.000Z'
+]
+{"message":"[200] / 8ms","label":null,"level":"info"}
+{"message":"[404] /images/rtt.png 4ms","label":null,"level":"info"}
+{"message":"[404] /default-fallback.jpg 2ms","label":null,"level":"info"}
+{"message":"[404] /images/rtt.png 5ms","label":null,"level":"info"}
+{"message":"[404] /default-fallback.jpg 3ms","label":null,"level":"info"}
+Sorted Posts Dates: [
+  '2025-09-27T00:00:00.000Z',
+  '2025-05-19T00:00:00.000Z',
+  '2025-03-19T00:00:00.000Z',
+  '2025-03-03T00:00:00.000Z',
+  '2025-02-20T00:00:00.000Z'
+]
+{"message":"[200] / 7ms","label":null,"level":"info"}
+{"message":"[404] /default-fallback.jpg 1ms","label":null,"level":"info"}
+{"message":"[404] /images/rtt.png 1ms","label":null,"level":"info"}
+{"message":"[404] /images/rtt.png 1ms","label":null,"level":"info"}
+{"message":"[404] /default-fallback.jpg 1ms","label":null,"level":"info"}
+{"message":"[200] /posts/league 13ms","label":null,"level":"info"}
+Sorted Posts Dates: [
+  '2025-09-27T00:00:00.000Z',
+  '2025-05-19T00:00:00.000Z',
+  '2025-03-19T00:00:00.000Z',
+  '2025-03-03T00:00:00.000Z',
+  '2025-02-20T00:00:00.000Z'
+]
+{"message":"[200] / 5ms","label":null,"level":"info"}
+{"message":"[404] /default-fallback.jpg 2ms","label":null,"level":"info"}
+{"message":"[404] /images/rtt.png 1ms","label":null,"level":"info"}
+{"message":"[404] /images/rtt.png 1ms","label":null,"level":"info"}
+{"message":"[404] /default-fallback.jpg 2ms","label":null,"level":"info"}
+Sorted Posts Dates: [
+  '2025-09-27T00:00:00.000Z',
+  '2025-05-19T00:00:00.000Z',
+  '2025-03-19T00:00:00.000Z',
+  '2025-03-03T00:00:00.000Z',
+  '2025-02-20T00:00:00.000Z'
+]
+{"message":"[200] / 4ms","label":null,"level":"info"}
+{"message":"[404] /images/rtt.png 1ms","label":null,"level":"info"}
+{"message":"[404] /default-fallback.jpg 1ms","label":null,"level":"info"}
+{"message":"[404] /images/rtt.png 1ms","label":null,"level":"info"}
+{"message":"[404] /default-fallback.jpg 1ms","label":null,"level":"info"}
+{"message":"[200] /about 14ms","label":null,"level":"info"}
+{"message":"[200] /models 23ms","label":null,"level":"info"}
+{"message":"[200] /_image 306ms","label":null,"level":"info"}
+{"message":"[200] /_image 383ms","label":null,"level":"info"}
+{"message":"[200] /_image 389ms","label":null,"level":"info"}
+{"message":"[200] /_image 398ms","label":null,"level":"info"}
+{"message":"[200] /_image 442ms","label":null,"level":"info"}
+{"message":"[200] /_image 573ms","label":null,"level":"info"}
+{"message":"[200] /_image 641ms","label":null,"level":"info"}
+{"message":"[200] /blog 17ms","label":null,"level":"info"}
+{"message":"[404] /images/rtt.png 1ms","label":null,"level":"info"}
+{"message":"[404] /default-fallback.jpg 1ms","label":null,"level":"info"}
+{"message":"[404] /images/rtt.png 1ms","label":null,"level":"info"}
+{"message":"[404] /default-fallback.jpg 1ms","label":null,"level":"info"}
+{"message":"[200] /blog 30ms","label":null,"level":"info"}
+{"message":"[200] /blog 27ms","label":null,"level":"info"}
+{"message":"[404] /default-fallback.jpg 2ms","label":null,"level":"info"}
+{"message":"[200] /blog 47ms","label":null,"level":"info"}
+{"message":"[404] /default-fallback.jpg 1ms","label":null,"level":"info"}
+{"message":"[200] /blog 12ms","label":null,"level":"info"}
+{"message":"[404] /default-fallback.jpg 1ms","label":null,"level":"info"}
+{"message":"[200] /blog 23ms","label":null,"level":"info"}
+{"message":"[404] /default-fallback.jpg 1ms","label":null,"level":"info"}
+{"message":"[404] /images/rtt.png 34ms","label":null,"level":"info"}
+{"message":"[404] /default-fallback.jpg 102ms","label":null,"level":"info"}
+{"message":"[404] /images/rtt.png 1ms","label":null,"level":"info"}
+{"message":"[404] /default-fallback.jpg 1ms","label":null,"level":"info"}
+{"message":"[200] /blog 11ms","label":null,"level":"info"}
+{"message":"[404] /default-fallback.jpg 1ms","label":null,"level":"info"}
+{"message":"[404] /images/rtt.png 1ms","label":null,"level":"info"}
+{"message":"[404] /images/rtt.png 1ms","label":null,"level":"info"}
+{"message":"[404] /default-fallback.jpg 1ms","label":null,"level":"info"}
+{"message":"[200] /posts/welcome-2 22ms","label":null,"level":"info"}
+{"message":"[200] /tags/news 24ms","label":null,"level":"info"}
+{"message":"[200] /posts/welcome-2 4ms","label":null,"level":"info"}
+{"message":"[200] /tags/hobby 5ms","label":null,"level":"info"}
+{"message":"[200] /posts/welcome-2 5ms","label":null,"level":"info"}
+{"message":"[200] /tags/update 5ms","label":null,"level":"info"}
+{"message":"[200] /posts/welcome-2 3ms","label":null,"level":"info"}
+Sorted Posts Dates: [
+  '2026-08-03T00:00:00.000Z',
+  '2025-09-27T00:00:00.000Z',
+  '2025-05-19T00:00:00.000Z',
+  '2025-03-19T00:00:00.000Z',
+  '2025-03-03T00:00:00.000Z',
+  '2025-02-20T00:00:00.000Z'
+]
+{"message":"[200] / 10ms","label":null,"level":"info"}
+{"message":"[404] /images/rtt.png 1ms","label":null,"level":"info"}
+{"message":"[404] /default-fallback.jpg 3ms","label":null,"level":"info"}
+{"message":"[404] /images/rtt.png 1ms","label":null,"level":"info"}
+{"message":"[404] /default-fallback.jpg 1ms","label":null,"level":"info"}
+{"message":"src/layout/BaseLayout.astro","label":"watch","level":"info"}
+{"message":"src/layout/BaseLayout.astro","label":"watch","level":"info"}
+Sorted Posts Dates: [
+  '2026-08-03T00:00:00.000Z',
+  '2025-09-27T00:00:00.000Z',
+  '2025-05-19T00:00:00.000Z',
+  '2025-03-19T00:00:00.000Z',
+  '2025-03-03T00:00:00.000Z',
+  '2025-02-20T00:00:00.000Z'
+]
+{"message":"[200] / 24ms","label":null,"level":"info"}
+{"message":"src/layout/BaseLayout.astro","label":"watch","level":"info"}
+{"message":"src/layout/BaseLayout.astro","label":"watch","level":"info"}
+Sorted Posts Dates: [
+  '2026-08-03T00:00:00.000Z',
+  '2025-09-27T00:00:00.000Z',
+  '2025-05-19T00:00:00.000Z',
+  '2025-03-19T00:00:00.000Z',
+  '2025-03-03T00:00:00.000Z',
+  '2025-02-20T00:00:00.000Z'
+]
+{"message":"[200] / 23ms","label":null,"level":"info"}
+{"message":"[404] /images/rtt.png 1ms","label":null,"level":"info"}
+{"message":"[404] /default-fallback.jpg 1ms","label":null,"level":"info"}
+{"message":"[404] /images/rtt.png 1ms","label":null,"level":"info"}
+{"message":"[404] /default-fallback.jpg 1ms","label":null,"level":"info"}
+{"message":".env changed, restarting server...","label":"vite","level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"Re-optimizing dependencies because vite config has changed","label":"vite","level":"info"}
+{"message":"server restarted.","label":"vite","level":"info"}
+Sorted Posts Dates: [
+  '2026-08-03T00:00:00.000Z',
+  '2025-09-27T00:00:00.000Z',
+  '2025-05-19T00:00:00.000Z',
+  '2025-03-19T00:00:00.000Z',
+  '2025-03-03T00:00:00.000Z',
+  '2025-02-20T00:00:00.000Z'
+]
+{"message":"[200] / 41ms","label":null,"level":"info"}
+{"message":"[404] /images/rtt.png 10ms","label":null,"level":"info"}
+{"message":"[404] /default-fallback.jpg 8ms","label":null,"level":"info"}
+{"message":"[404] /images/rtt.png 1ms","label":null,"level":"info"}
+{"message":"[404] /default-fallback.jpg 1ms","label":null,"level":"info"}

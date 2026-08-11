@@ -1,18 +1,105 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-const { frontmatter, Content } = Astro.props;
+const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-    <p>{frontmatter.date ? frontmatter.date.toString().slice(0, 10) : "Date not available"}</p>
-    <p><em>{frontmatter.description || "No description available"}</em></p>
-    <p>Written by: {frontmatter.author || "Unknown Author"}</p>
-    <img src={frontmatter.image?.url || '/default-image.jpg'} width="300" alt={frontmatter.image?.alt || 'Image description unavailable'} />
+    <article class="blog-post">
+        <header class="post-header">
+            <p class="post-date">{frontmatter.date ? new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : "Date not available"}</p>
+            <h1 class="post-title">{frontmatter.title}</h1>
+            <div class="post-meta">
+                <span class="post-author">By {frontmatter.author || "Warboss"}</span>
+                {frontmatter.tags && (
+                    <div class="post-tags">
+                        {frontmatter.tags.map((tag: string) => (
+                            <a href={`/tags/${tag}`} class="tag">#{tag}</a>
+                        ))}
+                    </div>
+                )}
+            </div>
+        </header>
 
-    <slot/>
+        {frontmatter.image && (
+            <div class="post-featured-image">
+                <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
+            </div>
+        )}
+
+        <div class="post-content">
+            <slot />
+        </div>
+    </article>
 </BaseLayout>
 
-
-
-
-
+<style>
+    .blog-post {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .post-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    .post-date {
+        color: var(--accent);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+    }
+    .post-title {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+    .post-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        color: var(--text-muted);
+    }
+    .post-tags {
+        display: flex;
+        gap: 0.5rem;
+    }
+    .tag {
+        color: var(--primary-light);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+    .tag:hover {
+        color: var(--accent);
+    }
+    .post-featured-image {
+        margin-bottom: 3rem;
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+    }
+    .post-featured-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .post-content {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: var(--text-main);
+    }
+    .post-content :global(p) {
+        margin-bottom: 1.5rem;
+    }
+    .post-content :global(h2) {
+        margin-top: 3rem;
+        margin-bottom: 1.5rem;
+        text-align: left;
+    }
+    .post-content :global(img) {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 2rem 0;
+    }
+</style>

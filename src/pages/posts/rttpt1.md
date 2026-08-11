@@ -4,7 +4,7 @@ date: 2025-09-27
 description: 'part one of my RTT coverage'
 author: 'Elia'
 image:
-  url: "../src/images/rtt.png"
+  url: "/images/rtt.png"
   alt: "image"
 layout: ../../layout/markdownlayout.astro
 ---

@@ -1,14 +1,19 @@
 ---
-const { pageTitle } = Astro.props;
 import BaseLayout from '../layout/BaseLayout.astro';
 import BlogPostCard from '../components/Postcard.astro';
 
+const pageTitle = "Blog | Morks News Network";
 
 type Post = {
     frontmatter: {
         title: string;
         date: string;
-        excerpt: string;
+        excerpt?: string;
+        description?: string;
+        image?: {
+            url: string;
+            alt: string;
+        };
     };
     url: string;
 };
@@ -21,17 +26,23 @@ const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).getTime
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <h1 class="title">Welcome to Morks News Network</h1>
+    <h1 class="title">All News</h1>
 
-    <!-- Blog posts grid -->
     <div class="posts-grid">
-        {sortedPosts.map((post) => (
+        {sortedPosts.map((post) => {
+            const imageUrl = post.frontmatter.image?.url ?? '/default-fallback.jpg';
+            const imageAlt = post.frontmatter.image?.alt ?? 'Post image';
+            
+            return (
                 <BlogPostCard
-                        url={post.url}
-                        title={post.frontmatter.title}
-                        date={post.frontmatter.date}
-                        excerpt={post.frontmatter.excerpt}
+                    url={post.url}
+                    title={post.frontmatter.title}
+                    date={post.frontmatter.date}
+                    excerpt={post.frontmatter.excerpt || post.frontmatter.description}
+                    imageUrl={imageUrl}
+                    imageAlt={imageAlt}
                 />
-        ))}
+            );
+        })}
     </div>
 </BaseLayout>
